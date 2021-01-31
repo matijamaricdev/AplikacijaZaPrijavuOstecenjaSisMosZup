@@ -1,0 +1,65 @@
+﻿@model AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj
+
+@{
+    ViewData["Title"] = "Detalji";
+}
+
+<h1>Detalji</h1>
+
+<div>
+    <h4>Prijavitelj</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Broj_Godina)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Broj_Godina)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OIB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OIB)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Selo_Grad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Selo_Grad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adresa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adresa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RazinaOstecenja)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RazinaOstecenja.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>|
+    <a asp-action="Index">Vrati se na listu</a>
+</div>

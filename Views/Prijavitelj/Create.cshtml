@@ -1,0 +1,66 @@
+﻿@model AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row" style="border: 1px solid grey; padding: 20px; border-radius: 10px;">
+    <div class="col-md-9" style="float:none;margin:auto; text-align: center;">
+        <h1>Prijavi štetu</h1>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prezime" class="control-label"></label>
+                <input asp-for="Prezime" class="form-control" />
+                <span asp-validation-for="Prezime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Broj godina
+                <input asp-for="Broj_Godina" class="form-control" />
+                <span asp-validation-for="Broj_Godina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OIB" class="control-label"></label>
+                <input asp-for="OIB" class="form-control" />
+                <span asp-validation-for="OIB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Upišite vaše selo ili grad
+                <input asp-for="Selo_Grad" class="form-control" />
+                <span asp-validation-for="Selo_Grad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Upišite vašu adresu
+                <input asp-for="Adresa" class="form-control" />
+                <span asp-validation-for="Adresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Upišite vaš e-mail za kontakt
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Odaberite vašu razinu oštećenja
+                <select asp-for="RazinaOstecenjaId" class="form-control" asp-items="ViewBag.RazinaOstecenjaId"></select>
+            </div>
+            <div class="form-group">
+                Kontakt broj
+                <input asp-for="Kontakt_Broj" class="form-control" />
+                <span asp-validation-for="Kontakt_Broj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

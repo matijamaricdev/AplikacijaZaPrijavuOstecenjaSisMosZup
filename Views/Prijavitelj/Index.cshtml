@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AplikacijaZaPrijavuOstecenjaSisMosZup.Models.Prijavitelj>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Informacije o ljudima kojima treba pomoć</h1>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+                Broj godina
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OIB)
+            </th>
+            <th>
+                Selo ili grad
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adresa)
+            </th>
+            <th>
+                Razina ostecenja
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Broj_Godina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OIB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Selo_Grad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RazinaOstecenja.Ime)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
