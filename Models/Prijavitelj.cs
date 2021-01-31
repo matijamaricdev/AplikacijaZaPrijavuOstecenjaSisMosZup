@@ -10,16 +10,16 @@ namespace AplikacijaZaPrijavuOstecenjaSisMosZup.Models
     {
         //Unique Id
         [Key]
-        public int Id { get; set; }
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public short Broj_Godina { get; set; }
-        public double OIB { get; set; }
-        public string Selo_Grad { get; set; }
-        public string Adresa { get; set; }
-        public RazinaOstecenja RazinaOstecenja { get; set; }
-        public int RazinaOstecenjaId { get; set; }
-        public string Email { get; set; }
-        public int Kontakt_Broj { get; set; }
+        public int Id { get; set; } 
+        public string Ime { get; set; } // Name
+        public string Prezime { get; set; } // Surname
+        public short Broj_Godina { get; set; } // How many years person have
+        public double OIB { get; set; } // Personal ID number
+        public string Selo_Grad { get; set; } // Village or city
+        public string Adresa { get; set; } // Address
+        public RazinaOstecenja RazinaOstecenja { get; set; } // Level of damage
+        public int RazinaOstecenjaId { get; set; } // Level of damage Id
+        public string Email { get; set; } // Email
+        public int Kontakt_Broj { get; set; } // Contact number
     }
 }
